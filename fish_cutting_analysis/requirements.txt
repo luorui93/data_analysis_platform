@@ -1,0 +1,8 @@
+rich==12.6.0
+dash==2.7.0
+pandas==1.2.4
+plotly==5.11.0
+scikit-image==0.17.2
+orjson==3.8.1
+dash-bootstrap-components==1.2.1
+numpy==1.22.2
