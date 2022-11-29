@@ -5,7 +5,6 @@ from dash import Dash, html, dcc, Input, Output, ctx
 import dash_bootstrap_components as dbc
 import plotly.express as px
 from skimage import io
-from skimage.transform import rescale
 
 import scipy.io
 import numpy as np
@@ -22,9 +21,7 @@ console = Console()
 hololens_folder = "/hololens_camera-rgb-image_raw-compressed/"
 camera1_folder = "/cam_1-color-image_raw/"
 camera2_folder = "/cam_2-rgb-image_rect_color/"
-mocap_start_time = 0
 p1_mocap_id = 3
-video_offset = 8
 
 # Mocap label reference:
 # ['Hammer' 'Right Elbow' 'Left Elbow' 'Right Shoulder' 'Left Shoulder'
@@ -84,7 +81,7 @@ class DataProcessServer(object):
         console.print(self.p1_mat[mocap_name]
                       ['Trajectories']['Labeled']['Data'][p1_mocap_id, :, :].T.shape)
         self.p1_df = pd.DataFrame(self.p1_mat[mocap_name]['Trajectories']
-                                  ['Labeled']['Data'][p1_mocap_id, 0:3, mocap_start_time:].T, columns=['x', 'y', 'z'])
+                                  ['Labeled']['Data'][p1_mocap_id, 0:3, :].T, columns=['x', 'y', 'z'])
 
     def update_text(self, n):
         return [html.Span('Test'+str(n))]

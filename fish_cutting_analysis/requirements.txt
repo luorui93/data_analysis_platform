@@ -6,3 +6,4 @@ scikit-image==0.17.2
 orjson==3.8.1
 dash-bootstrap-components==1.2.1
 numpy==1.22.2
+tk==0.1.0
