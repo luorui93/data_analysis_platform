@@ -70,7 +70,9 @@ class DataProcessServer(object):
         # return the first found mat file
         mat_path = glob.glob(self.parent_dir+"/*.mat")[0]
         mocap_name = os.path.splitext(os.path.basename(mat_path))[0]
+        mocap_name = "_".join(mocap_name.split('_')[1:])
         self.entry_name = mocap_name
+
         self.p1_mat = scipy.io.loadmat(mat_path, simplify_cells=True)
         console.print(f"Read mocap data from {mat_path}")
         console.print("Mocap labels")
