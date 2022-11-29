@@ -3,7 +3,7 @@
 Data analysis platforms for viewing multimodal sensor data developed in [Dash](https://dash.plotly.com/introduction).
 
 ## Setup
-1. Python > 3.6 is required.
+1. Python >= 3.6 is required.
 
 2. Anaconda or other similar virtual environment is recommended.
 
