@@ -14,12 +14,13 @@ Data analysis platforms for viewing multimodal sensor data developed in [Dash](h
 ### Fish Cutting Analysis
 1. Navigate to `fish_cutting_analysis` folder and run `python app.py`
 
-2. A file selection gui will pop up, select the data that contains the trial data, for example `<path_to_data>/trial1`. 
+2. A folder selection gui will pop up, select the data that contains the trial data, for example `<path_to_data>/trial1`. 
    Make sure the mocap data `*.mat` is also in the corresponding folder.
 
 3. Visit http://127.0.0.1:8050/ in your web browser.
 
-4. You can set the hammer time for the camera view or mocap to sync data.
+4. Drag the slider will fast forward the frames. The slider value is currently in milliseconds. 
+   You can set the hammer time for the camera view or mocap to sync data.
 
 
 
