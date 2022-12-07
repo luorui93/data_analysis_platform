@@ -169,23 +169,21 @@ class DataProcessServer(object):
         return html.Div(
             [
                 dbc.Row(
-                    dbc.Col(html.H1("Fish Cutting Data Analysis", className="btn-primary"))),
-                dbc.Row(dbc.Col(html.H2(self.entry_name,
-                                        className="btn-primary"), width=2)),
+                    dbc.Col(html.H1(f"Fish Cutting Data Analysis: {self.entry_name}", className="text-white bg-dark"))),
                 dbc.Row(dbc.Col(html.Br(id="sync-time"))),
                 dbc.Row([
                         dbc.Col(html.Div([
-                            html.H3("Hololens", className="btn-secondary"),
+                            html.H3("Hololens", className="card-header"),
                             dcc.Graph(id='hololens-graph'),
-                        ])),
+                        ], className="card text-white bg-dark mb-3")),
                         dbc.Col(html.Div([
-                            html.H3("Camera1", className="btn-secondary"),
+                            html.H3("Camera1", className="card-header"),
                             dcc.Graph(id='cam1-graph'),
-                        ])),
+                        ], className="card text-white bg-dark mb-3")),
                         dbc.Col(html.Div([
-                            html.H3("Camera2", className="btn-secondary"),
+                            html.H3("Camera2", className="card-header"),
                             dcc.Graph(id='cam2-graph'),
-                        ]))
+                        ], className="card text-white bg-dark mb-3"))
                         ]),
                 dbc.Row([
                         dbc.Col(html.H3("Hololens hammer point: ",
@@ -203,13 +201,13 @@ class DataProcessServer(object):
                 dbc.Row([
                     dbc.Col([
                         html.H2(
-                            f"Tracker {self.p1_label[p1_mocap_id]}", className="btn-warning"),
+                            f"Tracker {self.p1_label[p1_mocap_id]}", className="card-header"),
                         dcc.Graph(id='plot1-graph',
                                   figure=px.line(self.p1_df, labels={'index': 'time (10ms)', 'value': 'pos'}, range_x=[0, 3000]))
-                    ], width=4),
+                    ], width=4, className="card text-white bg-dark mb-3"),
                 ]),
 
-                dbc.Row([dbc.Col(html.H3("Mocap hammer point: ", className="btn-warning"), width=2),
+                dbc.Row([dbc.Col(html.H3("Mocap hammer point: ", className="text-white bg-dark"), width=2),
                          dbc.Col(dcc.Input(id="mocap-hammer-frame", type="number", value=0,
                                            debounce=True, placeholder="Hammer Frame"), width=1)]),
                 dbc.Row(dbc.Col(html.Br())),
