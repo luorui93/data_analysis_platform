@@ -9,6 +9,27 @@ Data analysis platforms for viewing multimodal sensor data developed in [Dash](h
 
 3. Run `pip install -r requirements.txt` to install Python modules.
 
+## Workspace layout
+To run this data analysis tool, your workspace layout should look like this:
+```
+Workspace/
+├── data_analysis_platform/
+│   ├── fish_cutting_analysis/
+│   │   ├── assets
+│   │   └── app.py
+│   ├── data_preprocess.py
+│   ├── README.md
+│   └── requirements.txt
+└── data/
+    ├── trial1/
+    │   ├── cam_1-color-image_raw
+    │   ├── cam_2-rgb-image_rect_color
+    │   ├── ...
+    │   └── Trial1_Cut_Fillets_Move_Toss.mat
+    ├── trial2/
+    │   └── ...
+    └── ...
+```
 
 ## Usage
 ### Fish Cutting Analysis
