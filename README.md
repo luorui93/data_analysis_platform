@@ -6,8 +6,8 @@ Data analysis platforms for viewing multimodal sensor data developed in [Dash](h
 1. Python >= 3.6 is required.
 
 2. Anaconda or other similar virtual environment is recommended.
-
-3. Run `pip install -r requirements.txt` to install Python modules.
+ 
+3. Run `pip install -r requirements.txt` to install Python modules. If the auto install failed, you may try to install pakcages manually, e.g. `pip install rich`
 
 ## Workspace layout
 To run this data analysis tool, your workspace layout should look like this:
