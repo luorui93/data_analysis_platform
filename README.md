@@ -9,7 +9,11 @@ Data analysis platforms for viewing multimodal sensor data developed in [Dash](h
 
 2. Anaconda or other similar virtual environment is recommended.
  
-3. Run `pip install -r requirements.txt` to install Python modules. If the auto install failed, you may try to install pakcages manually, e.g. `pip install rich`
+3. Install Python modules dependencies.
+```
+pip install -r requirements.txt
+``` 
+If the auto install failed, you may try to install pakcages manually, e.g. `pip install rich`
 
 ## Workspace layout
 To run this data analysis tool, your workspace layout should look like this:
@@ -34,8 +38,17 @@ Workspace/
 ```
 
 ## Usage
+### Data Preprocess
+Some of the data might require preprocessing such as naming correction and color correction. Simply run
+```
+python data_preprocess.py
+```
+and follow the prompts to execute the functions you want.
 ### Fish Cutting Analysis
-1. Navigate to `fish_cutting_analysis` folder and run `python app.py`
+1. Navigate to `fish_cutting_analysis` folder and run 
+```
+python app.py
+```
 
 2. A folder selection gui will pop up, select the data that contains the trial data, for example `<path_to_data>/trial1`. 
    Make sure the mocap data `*.mat` is also in the corresponding folder.
