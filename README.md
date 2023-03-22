@@ -2,7 +2,7 @@
 
 Data analysis platforms for viewing multimodal sensor data developed in [Dash](https://dash.plotly.com/introduction).
 
-![Data analysis platform user interface](/demo.png)
+![Data analysis platform user interface](/demo.gif)
 
 ## Setup
 1. Python >= 3.6 is required.
@@ -52,6 +52,8 @@ python app.py
 
 2. A folder selection gui will pop up, select the data that contains the trial data, for example `<path_to_data>/trial1`. 
    Make sure the mocap data `*.mat` is also in the corresponding folder.
+   
+![](/data_selection.gif)
 
 3. Visit http://127.0.0.1:8050/ in your web browser.
 
